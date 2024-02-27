@@ -1,0 +1,24 @@
+:root {
+  --white: #FFFFFF;
+  --sidebar-background: #FCFCFD;
+  --text-link: #424662;
+  --background: #F1F3FF;
+  --sidebar-primary: #605DFF;
+  --sidebar-primary-hover: #605DFF10;
+  --cta-background-border: #CDD2F3;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #C7D2DC;
+  padding: 16px;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
