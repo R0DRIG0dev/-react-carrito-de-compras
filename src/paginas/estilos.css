@@ -1,8 +1,12 @@
 .flex-general{
     display: flex;
-    height: 100%;
-}  
-  
-.flex-1{
-    flex: 1 1 0%
+    gap: 26px;
+}
+
+.contenedoBarraLateral{
+    flex: 1;    
+}
+
+main{
+    flex: 4;
 }
