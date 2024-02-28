@@ -1,7 +1,7 @@
 import {cursos} from '../datos';
-// import Curso from '../componentes/curso';
+import Curso from '../componentes/curso';
 // import useCodea from '../hooks/useCodea';
-// import "./estilos/inicio.css";
+import "./inicio.css";
 
 export default function Inicio() {
 //   const { areaActual } = useCodea();
@@ -9,12 +9,9 @@ export default function Inicio() {
   return (
     <>
       <div className='grillaCursos'>
-        <ul>
-            {cursos.map(bbbbbb =>(
-            //   <Curso key={bbbbbb.imagen} unCurso={bbbbbb}/>
-                <li>{bbbbbb.nombre}</li>
-            ))}
-        </ul>
+        {cursos.map(bbbbbb =>(
+          <Curso key={bbbbbb.imagen} unCurso={bbbbbb}/>
+        ))}
       </div>
     </>
   )

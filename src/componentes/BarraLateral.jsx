@@ -1,11 +1,13 @@
 import "./estilos/BarraLateral.css";
 
 function BarraLateral() {
+  const efecto_colapsar = ()=>{document.body.classList.toggle("collapsed")}
+
   return (
     <nav className="sidebar">
-      <div className="sidebar-top-wrapper">
+      <div className="sidebar-top-wrapper" onClick={efecto_colapsar}>
         <a href="#" className="logo__wrapper">
-          <img src="../public/logo.PNG" alt="logo"/>
+          <img src="../public/logo.PNG" alt="logo" className="logo-small"/>
           <span className="hide"> Codea App </span>
         </a>
         <div className="expand-btn">
@@ -31,7 +33,7 @@ function BarraLateral() {
           <li>
             <a href="#">
               <img src="../public/backend.svg" alt="logo"/>
-              Backend
+              <span className="hide">Backend</span>
             </a>
           </li>
         </ul>
@@ -39,7 +41,7 @@ function BarraLateral() {
           <li>
             <a href="#">
               <img src="../public/desarrollo_movil.svg" alt="logo"/>
-              Desarrollo movil
+              <span className="hide">Desarrollo movil</span>
             </a>
           </li>
         </ul>
@@ -47,7 +49,7 @@ function BarraLateral() {
           <li>
             <a href="#">
               <img src="../public/frontend.svg" alt="logo"/>
-              Frontend 
+              <span className="hide">Frontend</span> 
             </a>
           </li>
         </ul>
@@ -55,7 +57,7 @@ function BarraLateral() {
           <li>
             <a href="#">
               <img src="../public/fullstack.svg" alt="logo"/>
-              Fullstack
+              <span className="hide">Fullstack</span>
             </a>
           </li>
         </ul>
@@ -63,7 +65,7 @@ function BarraLateral() {
           <li>
             <a href="#">
               <img src="../public/otros.svg" alt="logo"/>
-              Otros 
+              <span className="hide">Otros</span> 
             </a>
           </li>
         </ul>

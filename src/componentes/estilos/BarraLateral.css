@@ -5,6 +5,7 @@
   border-radius: 16px;
   max-width: 18rem;
   background-color: var(--sidebar-background);
+  transition: max-width 0.1s ease-in-out;
 }
   
 .sidebar-top-wrapper {
@@ -20,6 +21,7 @@
   font-weight: 700;
   font-size: 1.8rem;
   text-decoration: none;
+  transition: max-width 0.1s ease-in-out;
 }
   
 .expand-btn {
@@ -95,4 +97,16 @@
 .sidebar-links li a:hover {
   color: var(--sidebar-primary);
 }
-  
+
+body.collapsed .sidebar {
+  max-width: 80px;
+}
+
+body.collapsed .hide {
+  position: absolute;
+  display: none;
+}
+
+body.collapsed .logo-small {
+  max-width: 3rem;
+}

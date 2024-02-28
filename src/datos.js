@@ -65,7 +65,7 @@ const cursos = [
   {
     nombre: "MVC PHP y MySQL Página web",
     precio: "$7",
-    imagen: "curso_11",
+    imagen: "curso_06",
     area_id: 1,
     id: 6
   }
