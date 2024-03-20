@@ -5,11 +5,13 @@
   border-radius: 16px;
   max-width: 18rem;
   background-color: var(--sidebar-background);
+  transition: max-width 0.1s ease-in-out;
 }
   
 .sidebar-top-wrapper {
   display: flex;
   padding-bottom: 16px;
+  transition: max-width 0.1s ease-in-out;
 }
   
 .logo__wrapper {
@@ -96,3 +98,15 @@
   color: var(--sidebar-primary);
 }
   
+body.collapsed .sidebar {
+  max-width: 80px;
+}
+
+body.collapsed .hide {
+  position: absolute;
+  display: none;
+}
+
+body.collapsed .logo-small {
+  max-width: 3rem;
+}
