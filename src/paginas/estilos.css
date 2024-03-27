@@ -1,7 +1,7 @@
 .flex-general{
     display: flex;
-    gap: 26px;
     height: 100%;
+    gap: 26px;
 }
 
 .contenedoBarraLateral{
