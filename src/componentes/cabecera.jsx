@@ -1,8 +1,6 @@
-// import useCodea from '../hooks/useCodea';
 import "./estilos/Cabecera.css";
 
-export default function Cabecera(){
-//   const {areaActual} = useCodea();
+export default function Cabecera (){
   return (
     <header className="cabecera">
       <h1> Lista de cursos </h1>
