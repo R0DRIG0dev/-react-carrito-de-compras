@@ -11,6 +11,7 @@
 .sidebar-top-wrapper {
   display: flex;
   padding-bottom: 16px;
+  transition: max-width 0.1s ease-in-out;
 }
   
 .logo__wrapper {
@@ -21,7 +22,6 @@
   font-weight: 700;
   font-size: 1.8rem;
   text-decoration: none;
-  transition: max-width 0.1s ease-in-out;
 }
   
 .expand-btn {
