@@ -5,9 +5,69 @@
 }
 
 .contenedoBarraLateral{
-    flex: 1;    
+    flex: 1;
 }
 
 main{
     flex: 4;
+}
+
+.contenedoColapsado{
+    flex: 0.25;
+}
+
+@media (max-width: 550px) {
+    .contenedoColapsado {
+        flex: 1;
+    }
+    .sidebar{
+        max-width: 50% !important;
+    }
+    body.collapsed .sidebar {
+        max-width: 20% !important;
+    }
+    .efectoPonerDialog {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+    }
+    .efectoQuitarDialog {
+        position: fixed;
+        top: 0;
+        right: 80%;
+        bottom: 0;
+        left: 0;
+        background: transparent;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 1250px) {
+    .contenedoColapsado {
+        flex: 0.5;
+    }
+    .sidebar{
+        max-width: 55% !important;
+    }
+    body.collapsed .sidebar {
+        max-width: 11.1% !important;
+    }
+    .efectoPonerDialog {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+    }
+    .efectoQuitarDialog {
+        position: fixed;
+        top: 0;
+        right: 88.9%;
+        bottom: 0;
+        left: 0;
+        background: transparent;
+    }
 }

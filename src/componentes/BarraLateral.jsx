@@ -1,7 +1,6 @@
 import "./estilos/BarraLateral.css";
 
-function BarraLateral() {
-  const efecto_colapsar = () =>document.body.classList.toggle("collapsed")
+function BarraLateral({efecto_colapsar}) {
 
   return (
     <nav className="sidebar">

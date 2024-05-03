@@ -1,9 +1,10 @@
 .sidebar {
-  position: sticky;
-  height: 100%;
+  position: fixed;
+  top: 16px;
+  bottom: 16px;
   padding: 16px 0px;
   border-radius: 16px;
-  max-width: 18rem;
+  max-width: 20%;
   background-color: var(--sidebar-background);
   transition: max-width 0.1s ease-in-out;
 }
@@ -97,9 +98,9 @@
 .sidebar-links li a:hover {
   color: var(--sidebar-primary);
 }
-
+  
 body.collapsed .sidebar {
-  max-width: 80px;
+  max-width: 5.88%
 }
 
 body.collapsed .hide {
