@@ -15,8 +15,8 @@ export default function Home (){
 
     return(
         <div className="flex-general">
-            <div className = {`contenedoBarraLateral ${colapsar ? 'contenedoColapsado' : ''}`}>
-                <div className= {`efectoPonerDialog ${colapsar ? 'efectoQuitarDialog' : ''}`}>
+            <div className = {`${colapsar ? 'contenedoColapsado' : 'contenedoBarraLateral'}`}>
+                <div className= {`${colapsar ? '' : 'efectoPonerDialog'}`}>
                     <BarraLateral efecto_colapsar={efecto_colapsar}/>
                 </div>
             </div>

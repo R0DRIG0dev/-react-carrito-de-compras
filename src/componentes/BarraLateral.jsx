@@ -1,7 +1,8 @@
+// import useTienda from "../hooks/useTienda";
 import "./estilos/BarraLateral.css";
 
-function BarraLateral({efecto_colapsar}) {
-
+function BarraLateral(props) {
+  // const { listaAreas, manejadorClickArea } = useTienda();
   return (
     <nav className="sidebar">
       <div className="sidebar-top-wrapper">
@@ -9,7 +10,7 @@ function BarraLateral({efecto_colapsar}) {
           <img src="../public/logo.PNG" alt="logo" className="logo-small"/>
           <span className="hide"> Codea App </span>
         </a>
-        <div className="expand-btn" onClick={ efecto_colapsar }>
+        <div className="expand-btn" onClick={ props.efecto_colapsar }>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6.00979 2.72L10.3565 7.06667C10.8698 7.58 10.8698 8.42 10.3565 8.93333L6.00979 13.28"
               stroke="#4A516D" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
@@ -27,47 +28,16 @@ function BarraLateral({efecto_colapsar}) {
 
       <div className="sidebar-links">
         <h2>Menú</h2>
-
-        <ul>
-          <li>
-            <a href="#">
-              <img src="../public/backend.svg" alt="logo"/>
-              <span className="hide"> Backend </span>
-            </a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">
-              <img src="../public/desarrollo_movil.svg" alt="logo"/>
-              <span className="hide"> Desarrollo movil </span>
-            </a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">
-              <img src="../public/frontend.svg" alt="logo"/>
-              <span className="hide"> Frontend </span> 
-            </a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">
-              <img src="../public/fullstack.svg" alt="logo"/>
-              <span className="hide"> Fullstack </span>
-            </a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">
-              <img src="../public/otros.svg" alt="logo"/>
-              <span className="hide"> Otros </span> 
-            </a>
-          </li>
-        </ul>
+          {/* <ul>
+            {listaAreas.map( area => (
+              <li key={area.icono}>
+                <a href="#" onClick={manejadorClickArea}>
+                  <img src={`../public/${area.icono}.svg`} alt="logo"/>
+                  <span className="hide"> {area.nombre} </span>
+                </a>
+              </li>
+            ))}
+          </ul> */}
       </div>
       
     </nav>
