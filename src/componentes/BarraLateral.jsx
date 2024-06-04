@@ -1,8 +1,9 @@
-// import useTienda from "../hooks/useTienda";
+import { useContext } from "react";
 import "./estilos/BarraLateral.css";
+import { contextoTienda } from "../contexto/ContextoTienda";
 
 function BarraLateral(props) {
-  // const { listaAreas, manejadorClickArea } = useTienda();
+  const listaAreas = useContext(contextoTienda);
   return (
     <nav className="sidebar">
       <div className="sidebar-top-wrapper">
@@ -28,16 +29,16 @@ function BarraLateral(props) {
 
       <div className="sidebar-links">
         <h2>Menú</h2>
-          {/* <ul>
+          <ul>
             {listaAreas.map( area => (
               <li key={area.icono}>
-                <a href="#" onClick={manejadorClickArea}>
+                <a href="#">
                   <img src={`../public/${area.icono}.svg`} alt="logo"/>
                   <span className="hide"> {area.nombre} </span>
                 </a>
               </li>
             ))}
-          </ul> */}
+          </ul>
       </div>
       
     </nav>

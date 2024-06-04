@@ -1,13 +1,22 @@
-import Reactcodea from 'react'
+import Reactcodea, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './paginas/Home'
 import Inicio from './vistas/Inicio'
-// import { ProveedorTienda } from './contexto/ProveedorTienda'
-import {contextoTienda} from "./hooks/useTienda";//
 
-const algo = { id:'12', name: "pendejo"}//
+import { areas } from './datos'
+import { contextoTienda } from './contexto/ContextoTienda'
+function ProveedorTienda ({children}){
+  const [ listaAreas, setListaCursos ] = useState(areas);
+  return (
+      <contextoTienda.Provider 
+          value={ listaAreas }
+      >
+          {children}
+      </contextoTienda.Provider>
+  )
+}
 
 const enrutador = createBrowserRouter([
   {
@@ -20,11 +29,7 @@ const enrutador = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Reactcodea.StrictMode>
-    {/* <ProveedorTienda> */}
-    <contextoTienda.Provider value={ algo }>{/* */}
+    <ProveedorTienda>
       <RouterProvider router={enrutador} />
-    </contextoTienda.Provider>{/* */}
-    {/* </ProveedorTienda> */}
-  </Reactcodea.StrictMode>,
+    </ProveedorTienda>
 )
