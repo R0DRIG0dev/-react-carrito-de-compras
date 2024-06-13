@@ -4,11 +4,9 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './paginas/Home'
 import Inicio from './vistas/Inicio'
+import { ProveedorTienda } from './contexto/Tienda'
 
-import { createContext } from "react";
-import { areas } from './datos'
-export const ContextoTienda = createContext();
-// const [listaAreas, setListaAreas] = useState(areas);
+
 
 const enrutador = createBrowserRouter([
   {
@@ -21,7 +19,7 @@ const enrutador = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <ContextoTienda.Provider value = {"listaAreas"}>
+    <ProveedorTienda>
       <RouterProvider router={enrutador} />
-    </ContextoTienda.Provider>
+    </ProveedorTienda>
 )
