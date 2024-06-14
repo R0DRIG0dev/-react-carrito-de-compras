@@ -32,7 +32,7 @@ function BarraLateral(props) {
           <ul>
             {listaAreas.map( area => (
               <li key={area.id}>
-                <a href="#" onClick={manejadorClickArea}>
+                <a href="#" onClick={() => manejadorClickArea(area.id)}>
                   <img src={`../public/${area.icono}.svg`} alt="logo"/>
                   <span className="hide"> {area.nombre} </span>
                 </a>
