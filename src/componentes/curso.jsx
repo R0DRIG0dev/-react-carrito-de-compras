@@ -1,11 +1,13 @@
+import { useContext } from 'react';
 import './estilos/Curso.css';
+import { ContextoTienda } from '../contexto/Tienda';
 
 export default function Curso({unCurso}) {
   const {imagen, nombre, precio} = unCurso;
-
+  const {manejadorClickCurso} = useContext(ContextoTienda);
   return(
     <article>
-      <figure >
+      <figure onClick={() => manejadorClickCurso(unCurso)}>
         <img src={`/public/${imagen}.jpg`} alt={`Imagen de ${nombre}`}/>
       </figure>
       <div className="article-preview">

@@ -20,6 +20,17 @@
     border: medium solid #555;
 }
 
+#carrito p{
+    text-align: center;
+    font-size: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #E1E1E1; 
+}
+
 .u-full-width {
     width: 100%;
     box-sizing: border-box; 
