@@ -11,17 +11,25 @@ export function ProveedorTienda({children}) {
         setSeleccion(areaSeleccionada);
     }
     const manejadorClickCurso = curso => {
-        const array = [...contenidoCarrito];
-        array.push(curso);
-        setContenidoCarrito(array)
+        if ( !contenidoCarrito.some(unCurso => unCurso.id === curso.id)) {
+            setContenidoCarrito([...contenidoCarrito, curso])
+        }
     }
+    const manejadorClickX = id =>{
+        const nuevoContenido = contenidoCarrito.filter( curso => curso.id !== id);
+        setContenidoCarrito(nuevoContenido);
+    }
+    const manejadorClickVaciar = () => setContenidoCarrito([]);
     return (
         <ContextoTienda.Provider value={{
-            listaAreas,
-            manejadorClickArea,
-            seleccion,
-            contenidoCarrito,
-            manejadorClickCurso}}
+                listaAreas,
+                manejadorClickArea,
+                seleccion,
+                contenidoCarrito,
+                manejadorClickCurso,
+                manejadorClickX,
+                manejadorClickVaciar
+            }}
         >
             {children}
         </ContextoTienda.Provider>

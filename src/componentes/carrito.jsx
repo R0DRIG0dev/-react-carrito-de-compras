@@ -3,7 +3,7 @@ import "./estilos/Carrito.css";
 import { ContextoTienda } from "../contexto/Tienda";
 
 export default function Carrito(){
-    const {contenidoCarrito} = useContext(ContextoTienda);
+    const {contenidoCarrito,manejadorClickX,manejadorClickVaciar} = useContext(ContextoTienda);
     return (
         <ul>
             <li className="submenu">
@@ -28,12 +28,12 @@ export default function Carrito(){
                                         <td> <img src={`../public/${unCurso.imagen}.jpg`} width="100"/> </td>
                                         <td> {unCurso.nombre} </td>
                                         <td> {unCurso.precio} </td>
-                                        <td> <a href="#" className="borrar-curso" data-id={unCurso.id}> X </a> </td>                                            
+                                        <td> <a onClick={()=>manejadorClickX(unCurso.id)} data-id={unCurso.id}> X </a> </td>                                            
                                     </tr>
                                 ))}
                             </tbody>
                         </table>
-                        <a href="#" id="vaciar-carrito" className="button u-full-width">VACIAR CARRITO</a>
+                        <a onClick={manejadorClickVaciar} className="button u-full-width">VACIAR CARRITO</a>
                         </>
                     )}
                 </div>
