@@ -1,14 +1,14 @@
+import Curso from '../componentes/curso.jsx';
 import {cursos} from '../datos.js'
+import "./inicio.css";
 
 export default function Inicio(){
   return (
     <>
       <div className='grillaCursos'>
-        <ul>
-            {cursos.map(unCurso =>(
-                <li key={unCurso.id} >{unCurso.nombre}</li>
-            ))}
-        </ul>
+        {cursos.map( curso =>(
+            <Curso key={curso.imagen} unCurso={curso}/>
+        ))}
       </div>
     </>
   )

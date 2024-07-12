@@ -1,19 +1,20 @@
 .sidebar {
-  position: sticky;
-  height: 100%;
+  position: fixed;
+  top: 16px;
+  bottom: 16px;
   padding: 16px 0px;
   border-radius: 16px;
-  max-width: 18rem;
+  max-width: 20%;
   background-color: var(--sidebar-background);
   transition: max-width 0.1s ease-in-out;
 }
-  
+ 
 .sidebar-top-wrapper {
   display: flex;
   padding-bottom: 16px;
   transition: max-width 0.1s ease-in-out;
 }
-  
+ 
 .logo__wrapper {
   display: flex;
   align-items: center;
@@ -23,7 +24,7 @@
   font-size: 1.8rem;
   text-decoration: none;
 }
-  
+ 
 .expand-btn {
   position: absolute;
   display: grid;
@@ -36,7 +37,7 @@
   height: 32px;
   border-radius: 8px;
 }
-  
+ 
 .expand-btn svg {
   transform: rotate(-180deg);
   stroke: var(--expand-button);
@@ -44,10 +45,12 @@
   height: 20px;
 }
 
+
 .search__wrapper {
   padding: 0 16px;
   position: relative;
 }
+
 
 .search__wrapper input {
   background-color: var(--background);
@@ -58,31 +61,34 @@
   border: none;
 }
 
+
 .search__wrapper svg {
   position: absolute;
   top: 33%;
   left: 26px;
 }
-  
+ 
 .sidebar-links {
     margin-top: 16px;
 }
+
 
 .sidebar-links h2 {
   margin-left: 16px;
   font-size: 16px;
   font-weight: 500;
 }
-  
+ 
 .sidebar-links ul {
   list-style-type: none;
   padding: 0px;
 }
 
+
 .sidebar-links li {
   margin: 20px 0px;
 }
-  
+ 
 .sidebar-links li a {
   color: var(--text-link);
   padding: 0 16px;
@@ -90,23 +96,39 @@
   text-decoration: none;
 }
 
+
 .sidebar-links li a:hover img {
   filter: invert(31%) sepia(52%) saturate(2635%) hue-rotate(228deg) brightness(105%) contrast(101%);
 }
 
+
 .sidebar-links li a:hover {
   color: var(--sidebar-primary);
 }
-  
+ 
 body.collapsed .sidebar {
-  max-width: 80px;
+  max-width: 5.88%
 }
+
 
 body.collapsed .hide {
   position: absolute;
   display: none;
 }
 
+
 body.collapsed .logo-small {
   max-width: 3rem;
+}
+
+
+@media (max-width: 550px) {
+  .sidebar{ max-width: 50%; }
+  body.collapsed .sidebar { max-width: 20%; }
+}
+
+
+@media (min-width: 551px) and (max-width: 1250px) {
+  .sidebar{ max-width: 55%; }
+  body.collapsed .sidebar { max-width: 11.1%; }
 }
