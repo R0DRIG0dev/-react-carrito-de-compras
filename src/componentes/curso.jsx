@@ -1,19 +1,17 @@
 import './estilos/Curso.css';
 
-export default function Curso(prop) {
+export default function Curso({unCurso}) {
+  const {imagen, nombre, precio} = unCurso;
 
-
-    const {imagen, nombre, precio} = prop.unCurso;
-
-    return(
-        <article>
-        <figure >
-            <img src={`/public/${imagen}.jpg`} alt={`Imagen de ${nombre}`}/>
-        </figure>
-        <div className="article-preview">
-            <h3>{nombre}</h3>
-            <p>{precio}</p>
-        </div>
-        </article>
-    )
+  return(
+    <article>
+      <figure >
+        <img src={`/public/${imagen}.jpg`} alt={`Imagen de ${nombre}`}/>
+      </figure>
+      <div className="article-preview">
+        <h3>{nombre}</h3>
+        <p>{precio}</p>
+      </div>
+    </article>
+  )
 }
