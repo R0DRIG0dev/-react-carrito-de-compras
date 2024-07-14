@@ -4,21 +4,17 @@
     gap: 26px;
 }
 
-
 .contenedoBarraLateral{
     flex: 1;
 }
-
 
 main{
     flex: 4;
 }
 
-
 .contenedoColapsado{
     flex: 0.25;
 }
-
 
 @media (max-width: 550px) {
     .contenedoColapsado {
@@ -33,7 +29,6 @@ main{
         background: rgba(0,0,0,0.8);
     }
 }
-
 
 @media (min-width: 551px) and (max-width: 1250px) {
     .contenedoColapsado {

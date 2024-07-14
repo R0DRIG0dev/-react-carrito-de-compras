@@ -5,11 +5,14 @@ import Cabecera from "../componentes/cabecera";
 import { useState } from "react";
 
 export default function Home (){
-    const [colapsar, setColapsar ]= useState(false)
-    const efecto_colapsar = () =>{
+
+    const [colapsar, setColapsar] = useState(false);
+
+    const efecto_colapsar = () => {
         document.body.classList.toggle("collapsed")
         setColapsar(!colapsar);
-    }
+    };
+
     return(
         <div className="flex-general">
             <div className = {`${colapsar ? 'contenedoColapsado' : 'contenedoBarraLateral'}`}>
