@@ -1,9 +1,11 @@
-import Reactcodea from 'react'
+import Reactcodea, { createContext, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './paginas/Home'
 import Inicio from './vistas/Inicio'
+import { ProveedorTienda } from './contexto/Tienda'
+
 
 const enrutador = createBrowserRouter([
   {
@@ -17,6 +19,8 @@ const enrutador = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Reactcodea.StrictMode>
-    <RouterProvider router={enrutador} />
+    <ProveedorTienda>
+      <RouterProvider router={enrutador} />
+    </ProveedorTienda>
   </Reactcodea.StrictMode>,
 )

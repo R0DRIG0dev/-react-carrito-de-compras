@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import "./estilos/BarraLateral.css";
+import { ContextoTienda } from "../contexto/Tienda";
 
 function BarraLateral(props) {
+  const {listaAreas, manejadorClickArea} = useContext(ContextoTienda);
 
   return (
     <nav className="sidebar">
@@ -27,47 +30,16 @@ function BarraLateral(props) {
 
       <div className="sidebar-links">
         <h2>Menú</h2>
-
-        <ul>
-          <li>
-            <a href="#">
-              <img src="../public/backend.svg" alt="logo"/>
-              <span className="hide"> Backend </span>
-            </a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">
-              <img src="../public/desarrollo_movil.svg" alt="logo"/>
-              <span className="hide"> Desarrollo movil </span>
-            </a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">
-              <img src="../public/frontend.svg" alt="logo"/>
-              <span className="hide"> Frontend </span> 
-            </a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">
-              <img src="../public/fullstack.svg" alt="logo"/>
-              <span className="hide"> Fullstack </span>
-            </a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">
-              <img src="../public/otros.svg" alt="logo"/>
-              <span className="hide"> Otros </span> 
-            </a>
-          </li>
-        </ul>
+          <ul>
+            {listaAreas.map( area => (
+              <li key={area.id}>
+                <a href="#" onClick={()=>manejadorClickArea(area.id)}>
+                  <img src={`../public/${area.icono}.svg`} alt="logo"/>
+                  <span className="hide"> {area.nombre} </span>
+                </a>
+              </li>
+            ))}
+          </ul>
       </div>
       
     </nav>

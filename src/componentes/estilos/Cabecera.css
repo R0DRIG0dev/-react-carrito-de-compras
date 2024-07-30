@@ -4,3 +4,33 @@
     background-color: var(--sidebar-background);
     margin-bottom: 16px;
 }
+
+.cabecera ul {
+    list-style: none;
+    padding: 0%;
+}
+
+.cabecera:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.columnas {
+    width: 100%;
+    float: left;
+}
+
+.pegar-ala-derecha {
+    float: right;
+}
+
+@media (min-width: 550px) {
+    .two.columnas { width: 5%; }
+    .four.columnas { width: 95%; }
+    #carrito-logo { padding-top: 15px; }
+}
+
+@media (max-width: 550px) {
+    .cabecera { text-align: center;}
+}
