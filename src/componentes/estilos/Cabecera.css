@@ -29,6 +29,7 @@
     .two.columnas { width: 5%; }
     .four.columnas { width: 95%; }
     #carrito-logo { padding-top: 15px; }
+    th, td { padding-left: 15px; padding-right: 15px; }
 }
 
 @media (max-width: 550px) {
